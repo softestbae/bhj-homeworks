@@ -1,11 +1,10 @@
-let timerToEnding = document.getElementById('timer');
-let counter = timerToEnding.textContent;
+const timerToEnding = document.getElementById('timer');
 
-let id = setInterval(() => {
-    if(counter > 0) {
-        counter -= 1;
+const id = setInterval( () => {
+    if (timerToEnding.textContent > 0) {
+        timerToEnding.textContent -= 1;
     }
-    else if(counter === 0) {
+    else if (timerToEnding.textContent == 0) {
         clearInterval(id);
         alert('Вы победили в конкурсе!');
     }
